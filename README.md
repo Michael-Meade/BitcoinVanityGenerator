@@ -17,6 +17,7 @@ By default, the script will save the created address in the wallets directory. T
 ```ruby
  Vanity.massGenerate(count, fileToWrite=nil)
 ```
+This will just create random addresses it uses no regexs.
 
 
 
