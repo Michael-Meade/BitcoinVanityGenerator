@@ -13,7 +13,6 @@ By default, the script will save the created address in the wallets directory. T
  ```ruby
  Vanity.regex("1(Meade)", "Mike")
  ```
- <br>
  
 ### <center> Mass Generate </center>
 <br>
