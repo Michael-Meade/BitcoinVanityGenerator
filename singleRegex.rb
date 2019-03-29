@@ -1,4 +1,4 @@
 require_relative 'lib/create'
 print "Enter Regex: "
 regex = gets.chomp
-Vanity.regex(regex, "McLovins")
+Vanity.regex("1(X)", "McLovins")
