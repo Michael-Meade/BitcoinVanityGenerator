@@ -2,9 +2,11 @@ require 'openssl'
 require 'ecdsa'
 require 'securerandom'
 require 'base58'
+require 'fileutils'
 require 'colorize'
 class BitcoinAddressGenerator
   ADDRESS_VERSION = '00'
+  FileUtils.mkdir_p "wallets"  unless File.exists?("wallets/")
   def address
     address = @address
   end
@@ -59,8 +61,8 @@ module Vanity
   class << self
     BTC = BitcoinAddressGenerator.new()
     def createDir(dir)
-			Dir.mkdir("wallets/" + dir.to_s) unless File.exists?("wallets/" + dir.to_s)
-	  end
+      FileUtils.mkdir_p "wallets/#{dir}"  unless File.exists?("wallets/#{dir}")
+    end
     def writeToFile(address, fileToWrite=nil)
       if fileToWrite != nil
         createDir(fileToWrite)
