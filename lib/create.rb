@@ -58,6 +58,9 @@ end
 module Vanity
   class << self
     BTC = BitcoinAddressGenerator.new()
+    def createDir(dir)
+			Dir.mkdir("wallets/" + dir.to_s) unless File.exists?("wallets/" + dir.to_s)
+	  end
     def writeToFile(address, fileToWrite=nil)
       if fileToWrite != nil
         createDir(fileToWrite)
