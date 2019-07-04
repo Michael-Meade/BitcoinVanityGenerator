@@ -22,7 +22,7 @@ This will just create random addresses it uses no regexs.
 
 
 <br>
-<br> The code above uses what ever is the number that the variable "count" is and will create that many addresses. This does not use any regex it just generates random addresses.  This module also includes the "fileToWrite" argument. Which if supplied with a string it will create a new directory and save all the newly created addresses in the directory.<br>
+<br> The code above uses count and will create that many addresses. This does not use any regex it just generates random addresses.  This module also includes the "fileToWrite" argument. Which if supplied with a string it will create a new directory and save all the newly created addresses in the directory.<br>
 
 
 
